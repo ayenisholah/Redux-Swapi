@@ -1,8 +1,4 @@
-import {
-  ADD_CHARACTER,
-  DELETE_CHARACTER,
-  GET_CHARACTERS
-} from "../actions";
+import { GET_CHARACTERS } from "../actions";
 const initialState = {
   characters: []
   // Array characters, Boolean fetching, null error.
@@ -10,7 +6,7 @@ const initialState = {
 export const charsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_CHARACTERS:
-      return action.payload
+      return { characters: action.payload }
     default:
       return state;
   }

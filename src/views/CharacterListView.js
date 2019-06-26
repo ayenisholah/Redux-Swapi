@@ -1,8 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import { CharacterList } from "../components";
-// import actions
+import CharacterList from "../components/CharacterList";
 import { getCharacters } from '../actions'
 
 class CharacterListView extends React.Component {
@@ -26,9 +24,9 @@ class CharacterListView extends React.Component {
   }
 }
 
-function mapStateToProps(reducers) {
+function mapStateToProps(state) {
   return {
-    characters: reducers.characters
+    characters: state.charsReducer.characters
   }
 }
 
